@@ -51,6 +51,10 @@ table {
 SCHUKIN.CO CSS
 */
 
+/*
+NAV BAR
+*/
+
 .bubble {
 display: table;
 }
@@ -61,13 +65,17 @@ padding-right: 25px;
 padding-left: 25px;
 }
 
+.bubble li:last-child {
+padding-bottom: 25px;
+}
+
 .bubble li span {
 background-color: #ffffff;
-height: 200px;
-width: 200px;
+height: 150px;
+width: 150px;
 border-radius: 50%;
 border-color: #00005c;
-border-width: 5px;
+border-width: 3px;
 border-style: solid;
 
 vertical-align: middle;
@@ -75,11 +83,120 @@ text-align: center;
 display: table-cell;
 
 font-family: Arial, sans-serif;
-font-weight: 700;
-font-size: 20px;
+font-weight: 400;
+font-size: 100%;
+
+box-shadow: inset 0 0 0 100px rgba(0,0,0,.25);
+
+background-repeat: no-repeat;
+background-size: auto 125%;
+
+}
+
+.bubble li span:hover{
+	color: #ffffff;	
+	font-weight: 700;
+	border-width: 3px;
+	border-color: #0080ff;
 }
 
 nav {
-float: right;
-clear: right;
+float: left;
+clear: left;
+}
+
+a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+#travel {
+	background-image: url("images/adventure_travel_thailand.jpg");
+}
+
+#reading {
+	background-image: url("images/open_book.jpg");
+}
+
+#causes {
+	background-image: url("images/helping_hand.jpg");
+	background-position: right;
+}
+
+#blog {
+	background-image: url("images/giving_tree.jpg");
+	background-size: auto 100%;
+}
+
+#contact {
+	background-image: url("images/tin_can_phone.jpg");
+	background-size: auto 100%;
+	color: #ffffff;
+}
+
+#about {
+	background-image: url("images/alex_jenny_uja.jpg");
+	background-position: center;
+}
+
+/*
+HEADER
+*/
+
+header {
+	display: block;
+	width: 100%;
+	height: 400px;
+
+	box-shadow: inset 0 0 0 400px rgba(0,0,0,.25);
+	text-align: center;
+	border-bottom-width: 8px;
+	border-bottom-style: solid;
+	border-bottom-color: #0080ff;
+}
+
+h1 {
+	font-weight: 400;
+	font-family: Arial, sans-serif;
+	color: #ffffff;
+	font-size: 50pt;
+	padding-top: 200px;
+}
+
+h3 {
+	font-style: italic;
+	font-weight: 400;
+	font-family: Arial, sans-serif;
+	color: #ffffff;
+	font-size: 20pt;
+	padding-top: 15px;
+}
+
+#causes_header {
+background-image: url("images/raised_hands_volunteer.jpg");	
+background-color: #00005c;
+background-position: center;
+}
+
+/*
+CONTACT ME BAR
+*/
+
+#contact_bar {
+	float: right;
+	clear: right;
+	text-align: center;
+}
+
+.side-bar {
+display: block;
+font-style: italic;
+max-width: 200px;
+padding-bottom: 15px;
+padding-right: 15px;
+}
+
+.icon {
+height: 35px;
+width: 35px;
 }
