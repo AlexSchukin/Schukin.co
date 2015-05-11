@@ -48,61 +48,96 @@ table {
 }
 
 /*
-SCHUKIN.CO CSS
+CLEAR FIX
 */
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+ 
+.clearfix:after {
+  clear: both;
+}
+ 
+.clearfix {
+  zoom: 1; /* ie 6/7 */
+}
+
+
+/*
+PAGE STRUCTURE
+*/
+
+.grid, .side_bar, .content, header {
+	padding-right: 15px;
+	padding-left: 15px;
+	background-color: #ffffff;
+}
+
+.side_bar, .content {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.grid {
+	width: 1024px;
+	display: block;
+	margin-right: auto;
+}
+
+.side_bar {
+	width: 18%;
+}
+
+.content {
+	width: 55%;
+}
 
 /*
 NAV BAR
 */
 
+#navigation li, #contact_bar li {
+	padding-top: 25px;
+	padding-right: 25px;
+	padding-left: 25px;
+	margin: 0 auto;
+}
+
+#navigation li:last-child, #contact_bar li:last-child {
+	padding-bottom: 25px;	
+}
+
 .bubble {
-display: table;
+	background-color: #ffffff;
+	height: 125px;
+	width: 125px;
+	border-radius: 50%;
+	border-color: #00005c;
+	border-width: 3px;
+	border-style: solid;
+
+	vertical-align: middle;
+	text-align: center;
+	display: table-cell;
+
+	font-family: Arial, sans-serif;
+	font-weight: 400;
+
+	box-shadow: inset 0 0 0 100px rgba(0,0,0,.25);
+
+	background-repeat: no-repeat;
+	background-size: auto 125%;
 }
 
-.bubble li {
-padding-top: 25px;
-padding-right: 25px;
-padding-left: 25px;
-}
-
-.bubble li:last-child {
-padding-bottom: 25px;
-}
-
-.bubble li span {
-background-color: #ffffff;
-height: 150px;
-width: 150px;
-border-radius: 50%;
-border-color: #00005c;
-border-width: 3px;
-border-style: solid;
-
-vertical-align: middle;
-text-align: center;
-display: table-cell;
-
-font-family: Arial, sans-serif;
-font-weight: 400;
-font-size: 100%;
-
-box-shadow: inset 0 0 0 100px rgba(0,0,0,.25);
-
-background-repeat: no-repeat;
-background-size: auto 125%;
-
-}
-
-.bubble li span:hover{
+.bubble:hover{
 	color: #ffffff;	
 	font-weight: 700;
 	border-width: 3px;
 	border-color: #0080ff;
-}
-
-nav {
-float: left;
-clear: left;
+	box-shadow: inset 0 0 0 100px rgba(0,0,0,.1);
 }
 
 a {
@@ -131,7 +166,6 @@ a {
 #contact {
 	background-image: url("images/tin_can_phone.jpg");
 	background-size: auto 100%;
-	color: #ffffff;
 }
 
 #about {
@@ -145,6 +179,7 @@ HEADER
 
 header {
 	display: block;
+	min-width: 1024px;
 	width: 100%;
 	height: 400px;
 
@@ -153,6 +188,9 @@ header {
 	border-bottom-width: 8px;
 	border-bottom-style: solid;
 	border-bottom-color: #0080ff;
+
+	background-color: #00005c;
+	background-position: center;
 }
 
 h1 {
@@ -173,30 +211,80 @@ h3 {
 }
 
 #causes_header {
-background-image: url("images/raised_hands_volunteer.jpg");	
-background-color: #00005c;
-background-position: center;
+	background-image: url("images/raised_hands_volunteer.jpg");	
+}
+
+#about_header {
+	background-image: url("images/raised_hands_volunteer.jpg");	
+}
+
+#blog_header {
+	background-image: url("images/raised_hands_volunteer.jpg");	
+}
+
+#reading_header {
+	background-image: url("images/raised_hands_volunteer.jpg");	
+}
+
+#travel_header {
+	background-image: url("images/raised_hands_volunteer.jpg");	
 }
 
 /*
 CONTACT ME BAR
 */
 
-#contact_bar {
-	float: right;
-	clear: right;
+.aside {
 	text-align: center;
+	display: block;
 }
 
-.side-bar {
-display: block;
-font-style: italic;
-max-width: 200px;
-padding-bottom: 15px;
-padding-right: 15px;
+.aside p {
+	font-style: italic;
+	padding-bottom: 10px;
 }
 
 .icon {
-height: 35px;
-width: 35px;
+	height: 35px;
+	width: 35px;
+	padding: 10px;
 }
+
+
+/*
+CONTENT
+*/
+
+.container{
+	padding-top: 50px;
+	font-weight: 400;
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	line-height: 20px;
+}
+
+.title {
+	display: table-cell;
+	vertical-align: middle;
+	color: #000000;
+	font-size: 18pt;
+	padding-bottom: 10px;
+}
+
+.desc-main {
+	font-weight: 700;
+	font-size: 18pt;
+}
+
+.desc-sub {	
+	font-weight: 400;
+	color: #A0A0A0;
+	font-size: 12pt;
+}
+
+.logo {
+	width: 200px;
+	padding-bottom: 10px;
+}
+
+
